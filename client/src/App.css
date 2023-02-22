@@ -1,0 +1,239 @@
+body {
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  justify-content: center;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.App {
+  text-align: center;
+  background-color: #202020;
+  color: white;
+}
+
+.header {
+  display: flex;
+  background-color: black;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.nav {
+  color: white;
+}
+
+.createProblem {
+  background-color: #2d2841;
+  color: white;
+  border-color: white;
+  height: 30px;
+  font-size: large;
+  margin-left: 8px;
+  border-radius: 8px;
+}
+
+.inputContainer {
+  background-color: #100e17;
+}
+
+.textbox {
+  background-color: white;
+  height: 30px;
+  font-size: large;
+  width: 13%;
+  border-radius: 8px;
+}
+
+::placeholder {
+  color: gray;
+}
+
+.problemsDisplay {
+  position: absolute;
+  height: 600px;
+  width: 75%;
+  top: 180px;
+  display: flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  padding-left: 160px;
+}
+
+.card {
+  display: block;
+  height: 200px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+  padding-top: 50px;
+}
+
+.card:not(:first-child) {
+  margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+h1 {
+  color: white;
+}
+
+.dash-container {
+  padding-top: 30px;
+}
+
+.dash {
+  display: grid;
+  gap: 60px;
+  grid-template-columns: 25% 25% 25%;
+  justify-content: center;
+}
+
+.dashboard-tile {
+  background-color: rgb(0, 132, 255);
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.dashboard-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.dashboard-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.submissions-tile {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.submissions-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.submissions-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.problem-tile {
+  background-color: rgb(255, 145, 0);
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.problem-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.problem-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.profile-tile {
+  background-color: magenta;
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.profile-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.profile-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.leetcode-tile {
+  background-color: rgb(0, 255, 136);
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.leetcode-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.leetcode-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.settings-tile {
+  background-color: rgb(68, 68, 68);
+  color: white;
+  width: 25%vw;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.settings-tile:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.settings-card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.img {
+  padding-top: 20px;
+  height: 100px;
+}
+
+.progress {
+  color: white;
+}
+
+.text {
+  color: white;
+}
