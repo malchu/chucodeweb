@@ -1,17 +1,21 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const UserModel = require("./models/Users");
+const axios = require("axios");
+const cheerio = require("cheerio");
+const puppeteer = require("puppeteer");
+const ProblemModel = require("./models/problems");
 
 const cors = require("cors");
+const { response } = require("express");
 
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("mongodb+srv://malchu:malchu@cluster0.hlvf3mr.mongodb.net/mern?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
 
-app.get("/getUsers", (req, res) => {
-    UserModel.find({}, (err, result) => {
+app.get("/getProblems", (req, res) => {
+    ProblemModel.find({}, (err, result) => {
       if (err) {
         res.json(err);
       } else {
@@ -20,13 +24,15 @@ app.get("/getUsers", (req, res) => {
     });
   });
   
-  app.post("/createUser", async (req, res) => {
-    const user = req.body;
-    const newUser = new UserModel(user);
-    await newUser.save();
+  app.post("/createProblem", async (req, res) => {
+    const problem = req.body;
+    const newProblem = new ProblemModel(problem);
+    await newProblem.save();
   
-    res.json(user);
+    res.json(problem);
   });
+
+  const url = "https://leetcode.com/problemset/all/";
 
 app.listen(3001, () => {
     console.log("Malchu")
