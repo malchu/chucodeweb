@@ -1,5 +1,5 @@
 # ChuCode
-Modern Web Application <br />
+Modern Web Application: Tech Interview Prep Companion <br />
 MongoDB, Express.js, React.js, Node.js, CSS <br /><br />
 ![](images/homejs.jpg)
 
