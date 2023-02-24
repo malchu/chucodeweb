@@ -32,7 +32,7 @@ function Dashboard() {
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setProgress(50);
+      setProgress(30);
     }, 100);
     return () => {
       clearInterval(timer);
