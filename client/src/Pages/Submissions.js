@@ -18,11 +18,10 @@ const columns = [
     label: 'Date',
     minWidth: 170,
     align: 'right',
-    format: (value) => value.toLocaleString('en-US'),
   },
   {
     id: 'size',
-    label: 'Duration',
+    label: 'Duration (min)',
     minWidth: 170,
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),
@@ -32,38 +31,36 @@ const columns = [
     label: 'Attempts',
     minWidth: 170,
     align: 'right',
-    format: (value) => value.toFixed(2),
+    format: (value) => value.toFixed(),
   },
   {
-    id: 'density',
+    id: 'force',
     label: 'Completed',
     minWidth: 170,
     align: 'right',
-    format: (value) => value.toFixed(2),
   },
 ];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
+function createData(name, code, population, size, density, force) {
+  return { name, code, population, size, density, force};
 }
 
 const rows = [
-  createData('Two Sum', 'Easy', 1324171354, 3287263),
-  createData('House Robber', 'Easy', 1403500365, 9596961),
-  createData('Contains Duplicate', 'Easy', 60483973, 301340),
-  createData('Missing Number', 'Easy', 327167434, 9833520),
-  createData('Valid Anagram', 'Easy', 37602103, 9984670),
-  createData('Valid Palindrome', 'Easy', 25475400, 7692024),
-  createData('Valid Parentheses', 'Easy', 83019200, 357578),
-  createData('Group Anagrams', 'Medium', 4857000, 70273),
-  createData('Top k Frequent Elements', 'Medium', 126577691, 1972550),
-  createData('Number of 1 Bits', 'Easy', 126317000, 377973),
-  createData('Product of Array Except Self', 'Medium', 67022000, 640679),
-  createData('Best Time to Buy and Sell Stock', 'Easy', 67545757, 242495),
-  createData('3Sum', 'Medium', 146793744, 17098246),
-  createData('Roman to Integer', 'Easy', 200962417, 923768),
-  createData('Count good Triplets', 'Easy', 210147125, 8515767),
+  createData('Two Sum', 'Easy', "01/25/2023", 32, 2, "yes"),
+  createData('House Robber', 'Easy', "01/24/2023", 35, 1, "yes"),
+  createData('Contains Duplicate', 'Easy', "01/24/2023", 45, 3, "yes"),
+  createData('Missing Number', 'Easy', "01/24/2023", 23, 2, "yes"),
+  createData('Valid Anagram', 'Easy', "01/23/2023", 25, 2, "yes"),
+  createData('Valid Palindrome', 'Easy', "01/22/2023", 36, 1, "yes"),
+  createData('Valid Parentheses', 'Easy', "01/21/2023", 38, 3, "yes"),
+  createData('Group Anagrams', 'Medium', "01/21/2023", 57, 4, "yes"),
+  createData('Top k Frequent Elements', 'Medium', "01/20/2023", 67, 5, "yes"),
+  createData('Number of 1 Bits', 'Easy', "01/18/2023", 43, 1, "yes"),
+  createData('Product of Array Except Self', 'Medium', "01/18/2023", 53, 2, "yes"),
+  createData('Best Time to Buy and Sell Stock', 'Easy', "01/18/2023", 35, 1, "yes"),
+  createData('3Sum', 'Medium', "01/16/2023", 45, 3, "yes"),
+  createData('Roman to Integer', 'Easy', "01/12/2023", 39, 2, "yes"),
+  createData('Count good Triplets', 'Easy', "01/11/2023", 29, 1, "yes"),
 ];
 
 function Submissions() {

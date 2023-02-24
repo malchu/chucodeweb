@@ -78,6 +78,19 @@ function Settings() {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <div className='about'>
+      <h2> About the Creator </h2>
+      <p>Malchu Pascual is a computer science student at the University of Maryland. Because algorithm and data structure 
+        problem solving problems play an important role in the interview process for software engineers, Malchu decided to 
+        build this app. He hopes to simplify what could be considered a daunting and unclear process in how to prepare for 
+        these technical interviews. 
+      </p>
+      <a href="https://github.com/malchu"><img alt='' class="link" src={require("./github.png")}></img></a>
+      <a href="https://www.linkedin.com/in/malchupascual/"><img alt='' class="link" src={require("./linkedin.png")}></img></a>
+      <h2>Check out Malchu's Other Apps!</h2>
+      <a href="https://tennismatchpredictor.malchupascual.repl.co/"><img alt='' class="link" src={require("./tmp.png")}></img></a>
+      <a href="/"><img alt='' class="link" src={require("./ChuCodeLogo.png")}></img></a>
+      </div>
     </div>
   )
 }
