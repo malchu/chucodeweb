@@ -13,5 +13,5 @@ ChuCode is a modern web application that simplifies the technical interview prep
 * LeetCode link so you can jump right in to problem solving after viewing your guide
 * LeetCode Problem of the Day 
 
-<br /> <br/>
+<br />
 ![](images/submissionsjs.jpg)
