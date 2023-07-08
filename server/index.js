@@ -10,7 +10,7 @@ const cors = require("cors");
 const { response } = require("express");
 
 const corsOptions = {
-  origin: "http://localhost:3000"
+  origin: "https://chucode.onrender.com"
 }
 app.use(express.json());
 app.use(cors(corsOptions));
