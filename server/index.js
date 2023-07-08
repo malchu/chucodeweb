@@ -10,7 +10,13 @@ const cors = require("cors");
 const { response } = require("express");
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://chucodeweb-backend.vercel.app/"],
+    method: ["POST", "GET"],
+    credentials: true
+  }
+));
 
 mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
 
