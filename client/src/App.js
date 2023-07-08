@@ -29,30 +29,6 @@ function App() {
       .then((data) => setMessage(data.message));
   }, []);
 
-  // retrieve data from MongoDB
-  useEffect(() => {
-    Axios.get("https://chucode-backend.onrender.com/getProblems").then((response) => {
-      setListOfProblems(response.data)
-    });
-  }, [])
-
-  // functions
-  const createProblem = () => {
-    Axios.post("https://chucode-backend.onrender.com/createProblem", {
-      name, 
-      difficulty, 
-      duration,
-      attempts,
-    }).then((response) => {
-      setListOfProblems([...listOfProblems, {
-        name, 
-        difficulty,
-        duration,
-        attempts,
-      }])
-    })
-  }
-
   const [value, setValue] = React.useState(0);
   
   const handleChange = (event, newValue) => {
