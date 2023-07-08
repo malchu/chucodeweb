@@ -21,21 +21,13 @@ import { useState, useEffect } from "react";
 
 function App() {
 
-  const [data, setData] = useState([]);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetchData();
+    fetch("http:://localhost:4000")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
   }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch('https://chucode-backend.vercel.app/'); // Replace with your actual API endpoint
-      const responseData = await response.json();
-      setData(responseData);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
 
   const [value, setValue] = React.useState(0);
   

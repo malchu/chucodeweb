@@ -9,12 +9,24 @@ const ProblemModel = require("./models/problems");
 const cors = require("cors");
 const { response } = require("express");
 
+const corsOptions = {
+  origin: "http://localhost:3000"
+}
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
-mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority").then(() => {
+  const PORT= process.env.PORT || 8000
+  app.listen(PORT, () => {
+    console.log("Malchu");
+  });
+}).catch(err => {
+  console.log(err);
+});
 
-app.get('/');
+app.get("/", (req, res) => {
+  res.status(201).json({message: "Connected to backend"});
+});
 
 app.get("/getProblems", (req, res) => {
     ProblemModel.find({}, (err, result) => {
@@ -35,7 +47,3 @@ app.get("/getProblems", (req, res) => {
   });
 
   const url = "https://leetcode.com/problemset/all/";
-
-  const port = process.env.PORT || 3000;
-
-  app.listen(port, '0.0.0.0');
