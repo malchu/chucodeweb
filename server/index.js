@@ -25,7 +25,7 @@ mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucod
 });
 
 app.get("/", (req, res) => {
-  res.render(App);
+  res.render('index');
 });
 
 app.get("/getProblems", (req, res) => {
