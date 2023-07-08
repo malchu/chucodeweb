@@ -14,6 +14,8 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
 
+app.use('/');
+
 app.get("/getProblems", (req, res) => {
     ProblemModel.find({}, (err, result) => {
       if (err) {
