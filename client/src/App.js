@@ -6,7 +6,6 @@ import Submissions from './Pages/Submissions';
 import Settings from './Pages/Settings';
 import Error from './Pages/Error';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
