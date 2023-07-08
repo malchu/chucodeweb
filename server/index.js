@@ -34,6 +34,4 @@ app.get("/getProblems", (req, res) => {
 
   const url = "https://leetcode.com/problemset/all/";
 
-app.listen(3001, () => {
-    console.log("Malchu")
-})
+  module.exports = app;
