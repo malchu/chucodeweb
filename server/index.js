@@ -38,11 +38,4 @@ app.get("/getProblems", (req, res) => {
 
   const port = process.env.PORT || 3000;
 
-  const http = require('http');
-  
-  const server = http.createServer((res, req) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, World!');
-  });
-  server.listen(port, '0.0.0.0');
+  app.listen(port, '0.0.0.0');
