@@ -1,5 +1,5 @@
 body {
-  background-color: #100e17;
+  background-color: #161f25;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -20,11 +20,14 @@ body {
 
 .header {
   display: flex;
-  background-color: black;
+  background-color: #253949;
+  box-shadow: 2px 2px 1px black;
 }
 
 .header-logo {
-  height: 50px;
+  height: 60px;
+  margin-top: 4px;
+  margin-left: 4px;
 }
 
 .nav {
@@ -33,14 +36,101 @@ body {
   margin-right: 0;
 }
 
-.createProblem {
-  background-color: #2d2841;
+.tab {
+  background-color: #253949;
   color: white;
-  border-color: white;
+  font-size: large;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: none;
+}
+
+.tab:hover {
+  background-color :azure;
+  border-color: azure;
+  color: rgb(0, 187, 201);
+}
+
+#chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45%;
+  height: 50%;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  margin-left: 5px;
+}
+
+#donut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 40%;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+}
+
+#pie {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%;
+  height: 40%;
+  margin: 0;
+  padding: 0;
+  margin-top: 80px;
+  margin-right: 25%;
+}
+
+#line {
+  position: relative;
+  bottom: 0;
+  width: 50%;
+  height: 40%;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  margin-top: 25%;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1px;
+  text-align: center;
+}
+
+.tile {
+  width: 40vh;
+  height: 35vh;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-top: 100%;
+  margin-left: 6vh;
+  border-radius: 3vh;
+  background-color: #253949;
+  border: none;
+  color: grey;
+  padding-top: 23%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.719);
+}
+
+.createProblem {
+  background-color: rgb(45, 40, 65);
+  color: white;
   height: 30px;
   font-size: large;
   margin-left: 8px;
   border-radius: 8px;
+}
+
+.createProblem:hover {
+  background-color: rgb(0, 255, 136);
+  color: black;
 }
 
 .inputContainer {
@@ -48,7 +138,7 @@ body {
 }
 
 .textbox {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 30px;
   font-size: large;
   width: 13%;
@@ -56,50 +146,35 @@ body {
 }
 
 ::placeholder {
-  color: gray;
+  color: rgb(175, 175, 175);
 }
 
 .problemsDisplay {
   position: absolute;
-  height: 600px;
-  width: 75%;
-  top: 180px;
-  display: flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  padding-left: 160px;
+  width: 100%;
+  top: 140px;
 }
 
 .card {
-  display: block;
-  height: 200px;
-  width: 200px;
-  background-color: #17141d;
-  border-radius: 10px;
-  box-shadow: -1rem 0 3rem #000;
-  transition: 0.4s ease-out;
+  width: 100%;
+  background: rgb(40, 49, 65);
   position: relative;
-  left: 0px;
-  padding-top: 50px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .card:not(:first-child) {
   margin-left: -50px;
 }
 
-.card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
-}
-
-.card:hover ~ .card {
-  position: relative;
-  left: 50px;
-  transition: 0.4s ease-out;
-}
-
 h1 {
   color: white;
+}
+
+p {
+  margin: 1%;
+  padding: 0;
 }
 
 .dash-container {
