@@ -12,14 +12,14 @@ function Submissions() {
 
   // retrieve data from MongoDB
   useEffect(() => {
-    Axios.get("https://localhost:3001/getProblems").then((response) => {
+    Axios.get("https://chucode-backend.onrender.com/getProblems").then((response) => {
       setListOfProblems(response.data)
     });
   }, [])
 
   // functions
   const createProblem = () => {
-    Axios.post("https://localhost:3001/createProblem", {
+    Axios.post("https://chucode-backend.onrender.com/createProblem", {
       name, 
       difficulty, 
       duration,
