@@ -24,6 +24,8 @@ mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucod
   console.log(err);
 });
 
+app.set('view engine', 'html');
+
 app.get("/", (req, res) => {
   res.render('index');
 });
