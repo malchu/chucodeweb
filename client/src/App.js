@@ -21,6 +21,22 @@ import Logout from '@mui/icons-material/Logout';
 
 function App() {
 
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://chucode-backend.vercel.app/'); // Replace with your actual API endpoint
+      const responseData = await response.json();
+      setData(responseData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
   const [value, setValue] = React.useState(0);
   
   const handleChange = (event, newValue) => {
