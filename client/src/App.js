@@ -23,11 +23,31 @@ function App() {
 
   const [message, setMessage] = useState("");
 
+
+
+  // retrieve data from MongoDB
   useEffect(() => {
-    fetch("https://chucode-backend.onrender.com")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
+    Axios.get("https://chucode-backend.onrender.com/getProblems").then((response) => {
+      setListOfProblems(response.data)
+    });
+  }, [])
+
+  // functions
+  const createProblem = () => {
+    Axios.post("https://chucode-backend.onrender.com/createProblem", {
+      name, 
+      difficulty, 
+      duration,
+      attempts,
+    }).then((response) => {
+      setListOfProblems([...listOfProblems, {
+        name, 
+        difficulty,
+        duration,
+        attempts,
+      }])
+    })
+  }
 
   const [value, setValue] = React.useState(0);
   
