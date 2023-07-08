@@ -10,15 +10,22 @@ const cors = require("cors");
 const { response } = require("express");
 
 app.use(express.json());
-app.use(cors(
-  {
-    origin: ["https://chucodeweb-backend.vercel.app/"],
-    method: ["POST", "GET"],
-    credentials: true
-  }
-));
+app.use(cors());
 
 mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
+
+app.use(express.static(path.join(__dirname, "./frontend/build")));
+
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "./client/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
 
 app.get("/getProblems", (req, res) => {
     ProblemModel.find({}, (err, result) => {
