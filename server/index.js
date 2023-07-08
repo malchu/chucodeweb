@@ -25,7 +25,7 @@ mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucod
 });
 
 app.get("/", (req, res) => {
-  res.status(201).json({message: "Connected to backend"});
+  res.render(App);
 });
 
 app.get("/getProblems", (req, res) => {

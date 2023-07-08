@@ -23,7 +23,11 @@ function App() {
 
   const [message, setMessage] = useState("");
 
-
+  useEffect(() => {
+    fetch("https://chucode-backend.onrender.com")
+      .then((res) => res.json())
+      .then((data) => setMessage(data.message));
+  }, []);
 
   // retrieve data from MongoDB
   useEffect(() => {
