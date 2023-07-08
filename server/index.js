@@ -14,7 +14,7 @@ app.use(cors());
 
 mongoose.connect("mongodb+srv://malchu:malchu@chucode.e7ldrkb.mongodb.net/chucode?retryWrites=true&w=majority")
 
-app.use('/');
+app.get('/');
 
 app.get("/getProblems", (req, res) => {
     ProblemModel.find({}, (err, result) => {
@@ -36,4 +36,13 @@ app.get("/getProblems", (req, res) => {
 
   const url = "https://leetcode.com/problemset/all/";
 
-  module.exports = app;
+  const port = process.env.PORT || 3000;
+
+  const http = require('http');
+  
+  const server = http.createServer((res, req) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello, World!');
+  });
+  server.listen(port, '0.0.0.0');
