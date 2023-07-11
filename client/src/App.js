@@ -73,6 +73,9 @@ function App() {
                 <a href="https://leetcode.com/problemset/all/">
                   <button className='tab' color='inherit' >LeetCode</button>
                 </a>
+                <a href="https://github.com/malchu/chucodeweb">
+                  <button className='tab' color='inherit' >Documentation</button>
+                </a>
                 <a href="/settings">
                   <button className='tab' color='inherit' >Settings</button>
                 </a>
