@@ -74,7 +74,7 @@ function App() {
                   <button className='tab' color='inherit' >LeetCode</button>
                 </a>
                 <a href="https://github.com/malchu/chucodeweb">
-                  <button className='tab' color='inherit' >Documentation</button>
+                  <button className='tab' color='inherit' >GitHub</button>
                 </a>
                 <a href="/settings">
                   <button className='tab' color='inherit' >Settings</button>
